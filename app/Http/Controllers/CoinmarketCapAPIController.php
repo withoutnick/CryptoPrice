@@ -21,8 +21,6 @@ class CoinmarketCapAPIController extends Controller
 
         $data = collect($response->json()['data']);
 
-        dd($data);
-
         return round($data->first()['quote'][$currency['1']]['price'], 5);
 
     }
