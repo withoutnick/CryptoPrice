@@ -49,7 +49,12 @@ class CoinmarketCapAPIController extends Controller
 
         $data = collect($response->json()['data']);
 
-        return str_replace(".", ",", round($data->first()['quote'][$currency['1']]['price'], 5));
+        $price = round($data->first()['quote'][$currency['1']]['price'], 5);
+
+        if(isset($request->version) && $request->version == 'gdocs')
+          $price = str_replace(".", ",", $price);
+
+        return $price;
 
     }
 
