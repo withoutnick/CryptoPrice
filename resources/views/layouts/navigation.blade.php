@@ -21,7 +21,7 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('donation')" :active="request()->routeIs('donation')">
-                        Donation
+                        Donate
                     </x-nav-link>
                 </div>
             </div>
@@ -52,7 +52,13 @@
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
+
+                        <x-dropdown-link :href="route('credentials-page')">
+                            Change password
+                        </x-dropdown-link>
+
                     </x-slot>
+
                 </x-dropdown>
             </div>
 

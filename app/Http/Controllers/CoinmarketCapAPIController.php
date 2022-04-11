@@ -11,6 +11,7 @@ use Kevinrob\GuzzleCache\Strategy\GreedyCacheStrategy;
 use Kevinrob\GuzzleCache\Storage\LaravelCacheStorage;
 use Cache;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class CoinmarketCapAPIController extends Controller
 {
@@ -55,6 +56,28 @@ class CoinmarketCapAPIController extends Controller
           $price = str_replace(".", ",", $price);
 
         return $price;
+
+    }
+
+    function testKey(Request $request) {
+
+      $user = Auth::user();
+
+      $request_parameters = [
+        'CMC_PRO_API_KEY' => $user->coinmarketcap_apikey,
+        'symbol' => 'CAS',
+      ];  
+
+      $request_endpoint = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest';
+      $response = Http::get($request_endpoint, $request_parameters);
+
+      if($response->status() == '401') 
+        return redirect()->back()->withErrors(['msg' => 'Your Coinmarketcap API key is not valid.']);
+      else {
+        return redirect()->back()->with('success', 'Great! Your API key is valid.');
+      }
+      
+
 
     }
 

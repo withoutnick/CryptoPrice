@@ -20,6 +20,13 @@ class DashboardController extends Controller
 
     }
 
+    function donation() {
+
+        $logged_in_user = auth()->user();
+        return view('donation', ['user' => $logged_in_user]);
+
+    }
+
     function how_it_works() {
 
         return view('how_it_works');

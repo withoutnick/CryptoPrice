@@ -21,9 +21,9 @@
             <p class="mt-5">
               <b>Available versions:</b>
               <ul>
-                <li><a class="text-indigo-500" href="#">Microsoft office (.docx)</a></li>
-                <li><a class="text-indigo-500" href="#">Libre Calc (.ods)</a></li>
-                <li><a class="text-indigo-500" href="#">Google Docs</a></li>
+                <li><a href="/files/spreadsheet_msoffice.xlsx" class="text-indigo-500" href="#">Microsoft office (.xlsx)</a></li>
+                <li><a href="/files/spreadsheet_libreoffice.ods" class="text-indigo-500" href="#">Libre Calc (.ods)</a></li>
+                <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1MtWgeI96lrWVRZqJ6kOn8-sxvi24i2h4AWpW0m_rEng/edit?usp=sharing" class="text-indigo-500" href="#">Google Spreadsheets</a></li>
 
               </ul>
 
@@ -54,9 +54,17 @@
                         </div>
                     @endif
 
+                    @if($errors->any())
+                        <div class="mt-2">
+                            <ul>
+                                <li class="text-red-600">{!! $errors->first() !!}</li>
+                            </ul>
+                        </div>
+                    @endif
+
                     <div class="mt-4">
                       <button class="bg-indigo-500 hover:bg-indigo-400 rounded-lg text-white p-3 mr-3">Update</button>
-                      <a class="text-slate-500" href="#">Test API Key</a>
+                      <a class="text-slate-500" href="{{ route('test-api-key') }}">Test API Key</a>
                     </div>
                   </form>
 
@@ -65,4 +73,5 @@
 
         </div>
     </div>
+
 </x-app-layout>
