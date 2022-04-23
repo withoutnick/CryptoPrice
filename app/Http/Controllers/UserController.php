@@ -12,6 +12,10 @@ class UserController extends Controller
 {
         
 
+    function index() {
+        return redirect( route('dashboard') );
+    }
+
     public function credentialsPage() {
 
         $logged_in_user = auth()->user();

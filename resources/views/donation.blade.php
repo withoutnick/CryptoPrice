@@ -17,21 +17,10 @@
                 If this tool is actually useful to you, I would be grateful if you would consider donating to this project to help with maintaining the system and covering the running costs.  
             </p>
             <p>
-                If you have any questions or suggestions, just shoot me an email: <a class="text-indigo-500" href="mailto:andrius@azemgulis.lt">andrius@azemgulis.lt</a>. 
+                If you have any questions or suggestions, just shoot me an email: <a class="text-indigo-500" href="mailto:andrius@cryptotradingjournal.org">andrius@cryptotradingjournal.org</a>. 
             </p>
-
-
-            <h2 class="mt-8 mb-4 font-bold text-lg leading-tight">Crypto accounts</h2>
-            <p>
-                <b>XRP:</b> rftK8PZhtg6QhBK8xyspNQZsCvFnPdvJ7H <br>
-                <b>BTC:</b> bc1qudxr0whq0srad8c8vdplxzngm6dfl8u2utxpvd <br>
-                <b>ETH:</b> 0x0Ee34BD7107c8a99ed783768f9d800d2e556cB74 <br>
-                <b>ADA:</b> addr1q8w7gywkn94sgkr8sy3xzep84twkq9ph8meakahfna9yn8kausgadxttq3vx0qfzv9jz02kavq2rw0hnmdmwn862fx0qfdlf7j <br>
-                <b>XMR:</b> 41tKGmbi9y7be6DVmj7S5e64nAkCwQgF9M1YgbzZGPk1YLYzsMheogPjnZTdifSRZtFB9wNpbwhBhNnMNrh1ux2ELfyvtkr <br>
-                <b>SOL:</b> FXToYUWS5haESurN12JVj1n8VfgKXgLDRii81rYXXdki
-            </p>
-
-            <h2 class="mt-5 mb-3 font-bold text-lg leading-tight">PayPal</h2>
+            
+            <h2 class="mt-8 mb-3 font-bold text-lg leading-tight">PayPal</h2>
            <p>To donate using PayPal please click a button below.</p>
             <form class="mt-2" action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="U2XLBPM5YLWG6" />
@@ -40,7 +29,32 @@
             </form>
 
 
+            <h2 class="mt-8 mb-4 font-bold text-lg leading-tight">Crypto accounts</h2>
 
+            <b>XRP:</b> 
+            <div class="mb-3">
+                <input readonly class="w-full border border-solid border-slate-300 rounded-lg p-3" type="text" value="rftK8PZhtg6QhBK8xyspNQZsCvFnPdvJ7H">
+            </div>
+            <b>BTC:</b> 
+            <div class="mb-3">
+                <input readonly class="w-full border border-solid border-slate-300 rounded-lg p-3" type="text" value="bc1qudxr0whq0srad8c8vdplxzngm6dfl8u2utxpvd">
+            </div>
+            <b>ETH:</b> 
+            <div class="mb-3">
+                <input readonly class="w-full border border-solid border-slate-300 rounded-lg p-3" type="text" value="0x0Ee34BD7107c8a99ed783768f9d800d2e556cB74">
+            </div>
+            <b>ADA:</b> 
+            <div class="mb-3">
+            <input readonly class="w-full border border-solid border-slate-300 rounded-lg p-3"type="text" value="addr1q8w7gywkn94sgkr8sy3xzep84twkq9ph8meakahfna9yn8kausgadxttq3vx0qfzv9jz02kavq2rw0hnmdmwn862fx0qfdlf7j">
+            </div>
+            <b>XMR:</b> 
+            <div class="mb-3">
+                <input readonly class="w-full border border-solid border-slate-300 rounded-lg p-3" type="text" value="41tKGmbi9y7be6DVmj7S5e64nAkCwQgF9M1YgbzZGPk1YLYzsMheogPjnZTdifSRZtFB9wNpbwhBhNnMNrh1ux2ELfyvtkr"> 
+            </div>
+            <b>SOL:</b> 
+            <div class="mb-3">
+                <input readonly class="w-full border border-solid border-slate-300 rounded-lg p-3" type="text" value="FXToYUWS5haESurN12JVj1n8VfgKXgLDRii81rYXXdki">
+            </div>
 
         </div>
     </div>

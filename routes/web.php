@@ -28,12 +28,11 @@ Route::get('test-api-key', [CoinmarketCapAPIController::class, 'testKey'])->midd
 Route::get('change-password', [UserController::class, 'credentialsPage'])->name('credentials-page');
 Route::patch('change-password', [UserController::class, 'credentials'])->name('change-password');
 
-
+Route::get('/docs/coinmarketcap-api-key', function() {
+    return view('cpc_api_key');
+})->middleware(['auth'])->name('cpc-api-key');
 
 Route::get('latest-price', [CoinmarketCapAPIController::class, 'latest']);
-
-
-
 
 Route::resource('/user', UserController::class)->middleware(['auth']);
 
